@@ -17,7 +17,6 @@ class TrackedActivityViewSet(viewsets.ModelViewSet):
 
 
     def create(self, request, **kwargs):
-        print(request.data)
         rawTrackedActivityData = {
             'activity_id': request.data['activityId'],
             'user_id': request.data['userId'],

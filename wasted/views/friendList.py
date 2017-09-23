@@ -16,13 +16,11 @@ class FriendListViewSet(viewsets.ModelViewSet):
 
 
     def create(self, request, **kwargs):
-        print(request.data)
         rawFriendListData = {
             'friend_id': request.data['friendId'],
             'user_id': request.data['userId'],
         }
         serializer = FriendListSerializer().create(data=rawFriendListData)
-        print rawFriendListData
         return Response()
 
     @list_route(methods=['post'])

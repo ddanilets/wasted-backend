@@ -16,7 +16,6 @@ class GoalsViewSet(viewsets.ModelViewSet):
 
 
     def create(self, request, **kwargs):
-        print(request.data)
         rawGoalData = {
             'name': request.data['name'],
             'user_id': request.data['userId'],

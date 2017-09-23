@@ -14,7 +14,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
 
     def create(self, request, **kwargs):
-        print(request.data)
         rawCategoryData = {
             'name': request.data['name'],
         }

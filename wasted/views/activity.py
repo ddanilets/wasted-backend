@@ -18,7 +18,6 @@ class ActivityViewSet(viewsets.ModelViewSet):
 
 
     def create(self, request, **kwargs):
-        print(request.data)
         rawActivityData = {
             'name': request.data['name'],
             'category_id': request.data['categoryId'],
