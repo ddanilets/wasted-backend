@@ -82,11 +82,14 @@ WSGI_APPLICATION = 'wasted.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'wasted',
-        'USER': 'root',
-        'PASSWORD': 'admin1234',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd71g2thiuvaanl',
+        'USER': 'tqnzwhavzuqrau',
+        'PASSWORD': 'a3e003ef9f9ca71605b440c03adb243b8020f6dfe42d3acb0ffb8060c6ad0191',
+        'HOST': 'ec2-46-137-117-43.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
 }
 
