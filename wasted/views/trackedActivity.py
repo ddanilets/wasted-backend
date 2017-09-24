@@ -43,7 +43,6 @@ class TrackedActivityViewSet(viewsets.ModelViewSet):
         for key in activityLists:
             if key.user.id == userId:
                 activityObj = {
-                    'name': key.name,
                     'activity': {
                         'id': key.activity.id,
                         'name': key.activity.name,
@@ -53,7 +52,9 @@ class TrackedActivityViewSet(viewsets.ModelViewSet):
                         }
                     },
                     'startTime': key.startTime,
+                    'endTIme': key.endTime,
                     'position': key.position,
+                    'id': key.id,
                 }
                 data.append(activityObj)
         return Response(data)
